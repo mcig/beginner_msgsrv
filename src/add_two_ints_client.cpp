@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
     ros::NodeHandle n;
 
-    ros::ServiceClient client = n.serviceClient<beginner_msgsrv::AddTwo Ints>("add_two_ints");
+    ros::ServiceClient client = n.serviceClient<beginner_msgsrv::AddTwoInts>("add_two_ints");
     beginner_msgsrv::AddTwoInts srv;
 
     srv.request.a = atoll(argv[1]);
