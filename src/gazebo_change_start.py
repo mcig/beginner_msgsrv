@@ -19,7 +19,7 @@ try:
     state.pose.orientation.z = 0
     state.pose.orientation.w = 1
     resp = change_start(state)
-
+    print("Moved robot to x=1, y=1")
 except rospy.ServiceException as e:
     print("Service call failed: %s"%e)
 

@@ -20,5 +20,7 @@ int main(int argc, char **argv)
     srv.request.model_state.pose.orientation.w = 1;
     client.call(srv);
 
+    ROS_INFO("Moved robot to x=2, y=1");
+
     return 0;
 }
