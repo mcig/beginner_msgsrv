@@ -167,6 +167,12 @@ target_link_libraries(changecolorsrv ${catkin_LIBRARIES})
 add_executable(gazeboservice src/gazeboservice.cpp)
 target_link_libraries(gazeboservice ${catkin_LIBRARIES})
 
+add_executable(gazebocontrol src/gazebocontrol.cpp)
+target_link_libraries(gazebocontrol ${catkin_LIBRARIES})
+
+add_executable(odomnode src/odomnode.cpp)
+target_link_libraries(odomnode ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############

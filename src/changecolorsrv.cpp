@@ -1,10 +1,9 @@
 #include <ros/ros.h>
-//#include <std_msgs/Empty.h>
 #include <std_srvs/Empty.h>
 #include <turtlesim/Spawn.h>
 
-int main(int argc, char **argv) {
-
+int main(int argc, char **argv)
+{
     ros::init(argc, argv, "setcolornode_cpp");
     ros::NodeHandle nh;
 
