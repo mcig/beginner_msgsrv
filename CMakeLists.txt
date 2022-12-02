@@ -161,6 +161,12 @@ target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 add_executable(gazeboChangeStart src/gazeboChangeStart.cpp)
 target_link_libraries(gazeboChangeStart ${catkin_LIBRARIES})
 
+add_executable(changecolorsrv src/changecolorsrv.cpp)
+target_link_libraries(changecolorsrv ${catkin_LIBRARIES})
+
+add_executable(gazeboservice src/gazeboservice.cpp)
+target_link_libraries(gazeboservice ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
