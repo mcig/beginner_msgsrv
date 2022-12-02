@@ -24,6 +24,7 @@ void odomCallback(const nav_msgs::Odometry::ConstPtr &msg)
     double roll, pitch, yaw;
     m.getRPY(roll, pitch, yaw);
     current_pose.theta = yaw;
+    ROS_INFO("Current Pose: x=%f, y=%f, theta=%f", current_pose.x, current_pose.y, current_pose.theta);
 }
 
 void move(ros::NodeHandle n)
@@ -42,6 +43,7 @@ void move(ros::NodeHandle n)
     msg.linear.x = 0;
     msg.angular.z = 0;
     pub.publish(msg);
+    ROS_INFO("Moved 2m forward");
 }
 
 int main(int argc, char **argv)
