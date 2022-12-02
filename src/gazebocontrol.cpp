@@ -30,16 +30,19 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "gazebocontrol");
     ros::NodeHandle nh;
-    velocity_pub = nh.advertise<geometry_msgs::Twist>("tb3_0/cmd_vel", 100);
+    velocity_pub = nh.advertise<geometry_msgs::Twist>("/cmd_vel", 100);
 
     ros::ServiceClient resetsim_client = nh.serviceClient<std_srvs::Empty>("/gazebo/reset_simulation");
     std_srvs::Empty srv;
     resetsim_client.call(srv);
+    ROS_INFO("Reset simulation");
 
     move_distance(nh, 1);
+    ROS_INFO("Moved 1m forward");
 
     ros::ServiceClient resetworld_client = nh.serviceClient<std_srvs::Empty>("/gazebo/reset_world");
     resetworld_client.call(srv);
+    ROS_INFO("Reset world");
 
     return 0;
 }
