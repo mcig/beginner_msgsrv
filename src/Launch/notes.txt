@@ -1,0 +1,9 @@
+Master          - Robot
+set ip of raspi - set master uri
+ssh into raspi  - turtlebot_brinup turtlebot_robot.launc
+- wallfollow
+- stop bot
+
+rosrun turtlebot3_example turtlebot3_server 
+roslaunch turtlebot3_example turtlebot3_client.launch 
+s 0.5 1
