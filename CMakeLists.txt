@@ -51,6 +51,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   Num.msg
+  SteeringAngle.msg
 #   #Message2.msg
 )
 
@@ -58,6 +59,7 @@ add_message_files(
 add_service_files(
   FILES
   AddTwoInts.srv
+  CalcSteeringAngle.srv
 #   Service2.srv
 )
 
